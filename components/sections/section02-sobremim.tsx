@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import Line from "@/components/ui/line";
@@ -5,8 +6,8 @@ import Heading from "@/components/ui/heading";
 
 const SobreMim = () => {
   return (
-    <section className="px-[5rem] py-4 bg-dark flex  items-center">
-      <div className="h-[25rem] w-[52.125rem] relative">
+    <section className="px-[5rem] py-4 bg-dark flex justify-evenly items-center">
+      <div className="h-[25rem] min-w-[52.125rem] relative">
         <Line classname="absolute top-[-1rem] left-[-1rem]" />
         <Image
           src={"/images/sobremim.png"}

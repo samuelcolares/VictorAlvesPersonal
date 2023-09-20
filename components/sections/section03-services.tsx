@@ -50,7 +50,7 @@ const Servicos = () => {
     />
   ));
   return (
-    <section className="lg:h-[100vh] bg-white py-2 px-[5em] flex flex-col items-center gap-1.25">
+    <section className="bg-white py-2 px-[5em] flex flex-col items-center gap-1.25">
       <div className="flex w-full self-start items-center justify-between">
         <div className="flex flex-col gap-0.75">
           <Heading titleBold="consultoria" title="online" color="dark" />
@@ -63,7 +63,7 @@ const Servicos = () => {
             <span className="font-bold text-primary950">R$ 149,90!</span>
           </h3>
         </div>
-        <Button text="compre aqui" />
+        <Button text="Saiba Mais" />
       </div>
       <div className="flex">{cardmaps}</div>
       <div className="flex w-full self-start items-center justify-between">

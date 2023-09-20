@@ -20,10 +20,10 @@ const Card: React.FC<CardProps> = ({ icon, title, desc, idx }) => {
         <span className="w-1.25 h-1.25 text-primary950 flex items-center justify-center text-1.5">{idx}</span>
         <div className="flex items-center justify-center">
           <Circle className="w-1.5 h-1.5 rounded-[50%]" />
-          <div className="bg-primary950 w-full h-[4px]" />
+          <div className="bg-primary950 w-full h-[.25rem] " />
         </div>
       </div>
-      <div className="w-[22.5rem] h-[26.875rem] flex flex-col items-center py-3.25 px-2.5 bg-white rounded-xl shadow-card">
+      <div className="w-[22.5rem] h-[26.875rem] flex flex-col items-center py-3.25 px-2.5 bg-white rounded-xl shadow-card lg:hover:scale-110 lg:hover:shadow-2xl transition">
         {icon}
         <div className="py-1 text-center flex flex-col gap-1">
           <h4 className="font-semibold text-1.5 leading-8 uppercase">

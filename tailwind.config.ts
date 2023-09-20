@@ -203,7 +203,11 @@ const config: Config = {
       letterSpacing: {
         button: "0.02rem",
       },
+      gridTemplateColumns: {
+        gifcard: "repeat(3, minmax(0, auto))",
+      },
       borderColor: {
+        gifcard: "#121212",
         primary50: "#F4F2FF",
         primary100: "#DFD8FE",
         primary200: "#C8BFFA",
@@ -237,6 +241,7 @@ const config: Config = {
         button: "0.75rem 0.75rem 0px 0px #5754A8",
         landing: "0.75rem 0.75rem 0.75rem 0px rgba(239, 239, 239, 0.12)",
         card: "-.75rem .25rem 3.75rem 0px rgba(62, 64, 149, 0.12)",
+        gifcard: "-0.25rem 0.25rem 1.25rem 0px rgba(250, 250, 250, 0.04)",
       },
       dropShadow: {
         landing: "-.25rem .25rem 1.25rem rgba(18, 18, 18, 0.80)",

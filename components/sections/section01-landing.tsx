@@ -60,6 +60,7 @@ const LandingSection = () => {
             width={1681}
             height={483}
             alt="Victor Alves Logo"
+            draggable={false}
           />
         </h1>
         <p className="text-white text-xl font-semibold leading-button tracking-button drop-shadow-landing w-[80%]">
@@ -76,7 +77,7 @@ const LandingSection = () => {
             <Link
               href={"#"}
               as={"button"}
-              className="px-1.5 flex items-center justify-center h-3 font-bold leading-button tracking-button text-white bg-[#5754A8]"
+              className="px-1.5 flex items-center justify-center h-3 font-bold leading-button tracking-button text-white bg-[#5754A8] lg:hover:scale-105 lg:hover:shadow-landing lg:hover:shadow-gray-950 transition rounded"
             >
               FAÇA PARTE DO TIME
             </Link>

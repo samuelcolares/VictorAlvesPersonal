@@ -1,14 +1,19 @@
+import VideosPlusFeedbacks from "@/components/sections-wrapper";
 import LandingSection from "@/components/sections/section01-landing";
 import SobreMim from "@/components/sections/section02-sobremim";
 import Servicos from "@/components/sections/section03-services";
+import Planos from "@/components/sections/section06-planos";
+
 import React from "react";
 
 const HomePage = () => {
   return (
     <main>
-      <LandingSection/>
-      <SobreMim/>
-      <Servicos/>
+      <LandingSection />
+      <SobreMim />
+      <Servicos />
+      <VideosPlusFeedbacks />
+      <Planos/>
     </main>
   );
 };
