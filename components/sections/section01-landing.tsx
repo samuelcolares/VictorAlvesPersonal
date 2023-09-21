@@ -70,10 +70,10 @@ const Landing = styled.header`
 
 const LandingSection = () => {
   return (
-    <Landing className="scroll relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2 animate-ping-test">
+    <Landing className="scroll relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2">
       <NavbarMobile />
       <NavbarDesktop />
-      <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem]">
+      <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem] animate-ping-test">
         <h1
           aria-label="Logo Victor Alves"
           className="h-[8.5rem] w-[30.86rem]"
@@ -87,7 +87,7 @@ const LandingSection = () => {
             draggable={false}
           />
         </h1>
-        <p className="text-white text-xl lg:font-semibold leading-button tracking-button drop-shadow-landing lg:w-[80%]">
+        <p className="text-white text-xl lg:text-1.25 lg:font-semibold leading-button tracking-button drop-shadow-landing lg:w-[80%]">
           Transforme seu corpo e alcance seus objetivos com uma consultoria
           online ou presencial. Seja qual for o seu nível de condicionamento
           físico ou sua rotina agitada, estou aqui para te ajudar a conquistar o
