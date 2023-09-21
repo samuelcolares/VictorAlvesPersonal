@@ -3,17 +3,25 @@ import LandingSection from "@/components/sections/section01-landing";
 import SobreMim from "@/components/sections/section02-sobremim";
 import Servicos from "@/components/sections/section03-services";
 import Planos from "@/components/sections/section06-planos";
+import { NavbarMobile } from "@/components/ui/navbar";
 
 import React from "react";
 
 const HomePage = () => {
   return (
     <main>
+
       <LandingSection />
       <SobreMim />
+      {/* <div className="h-[100vh] scroll bg-dark" id="sobremim"></div> */}
+      <div className="h-[100vh] scroll bg-white" id="consultoria"></div>
+      <div className="h-[100vh] scroll bg-dark" id="videos"></div>
+      <div className="h-[100vh] scroll bg-dark" id="feedbacks"></div>
+      <div className="h-[100vh] scroll bg-white" id="planos"></div>
+      {/* 
       <Servicos />
       <VideosPlusFeedbacks />
-      <Planos/>
+      <Planos/> */}
     </main>
   );
 };

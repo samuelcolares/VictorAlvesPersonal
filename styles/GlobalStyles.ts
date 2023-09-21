@@ -15,6 +15,7 @@ const styles = css`
   } */
   html{
     font-size: 100%;
+    scroll-behavior:smooth;
   }
 `;
 

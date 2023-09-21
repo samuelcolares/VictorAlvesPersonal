@@ -5,7 +5,10 @@ import PlanosCards from "@/components/ui/planos-card";
 
 const Planos = () => {
   return (
-    <section className="bg-white py-2 px-[5rem] flex flex-col">
+    <section
+      className="scroll bg-white py-2 px-[5rem] flex flex-col"
+      id="planos"
+    >
       <div className="flex flex-col items-center justify-center gap-0.75 mb-2">
         <Heading
           titleBold="escolhaseu"

@@ -171,10 +171,10 @@ const PlanosCards = () => {
           <Dumbbell />
           <h2>Personal Training</h2>
           <ul>
-            <li>Planilha com foco no seu objetivo</li>
-            <li>Planilha com foco no seu objetivo</li>
-            <li>Planilha com foco no seu objetivo</li>
-            <li>Planilha com foco no seu objetivo</li>
+            <li>Treino individualizado</li>
+            <li>Acompanhamento de evolução</li>
+            <li>Treinos e ajustes presenciais</li>
+            <li>Apenas Fortaleza e Eusébio (CE)</li>
           </ul>
         </div>
         <h3>

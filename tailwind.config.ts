@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation:{
+        'ping-test': "ping .4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;"
+      },
       fontSize: {
         "0.25": "0.25rem",
         "0.375": "0.375rem",

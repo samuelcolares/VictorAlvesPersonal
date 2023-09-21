@@ -14,7 +14,7 @@ import TestimonialBox from "../ui/testimonial-box";
 
 const Feedbacks = () => {
   return (
-    <section className="py-2 px-[5rem]">
+    <section className="scroll py-2 px-[5rem]" id="feedbacks">
       <div className="flex items-center justify-between mb-2">
         <div className="flex flex-col gap-0.75">
           <Heading

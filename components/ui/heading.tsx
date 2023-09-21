@@ -13,7 +13,7 @@ const Heading: React.FC<HeadingProps> = ({ title, titleBold, className, color })
   return (
     <h2
       className={cn(
-        "text-2.5 tracking-tight uppercase w-[26.875rem] border-b-[.25rem] border-primary700 leading-[3.25rem]",
+        "text-1.25 lg:text-2.5 tracking-wide uppercase lg:w-[26.875rem] border-b-[.25rem] border-primary700 lg:leading-[3.25rem] leading-5",
         `${className} `
       )}
     >

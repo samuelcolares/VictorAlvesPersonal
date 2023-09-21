@@ -1,6 +1,6 @@
 "use client";
 import { Quote } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type CardProps = {
   image: React.ReactNode;
@@ -17,6 +17,13 @@ const TestimonialCard: React.FC<CardProps> = ({
   mes,
   ano,
 }) => {
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+  useEffect(() => setIsMounted(true), []);
+  if (!isMounted)
+    return (
+      <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-transparent flex flex-col gap-0.75 justify-between cursor-default" />
+    );
+
   return (
     <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-white flex flex-col gap-0.75 justify-between cursor-default">
       <header className="flex items-center gap-0.75">

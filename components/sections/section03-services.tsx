@@ -50,7 +50,7 @@ const Servicos = () => {
     />
   ));
   return (
-    <section className="bg-white py-2 px-[5em] flex flex-col items-center gap-1.25">
+    <section className="scroll bg-white py-2 px-[5em] flex flex-col items-center gap-1.25" id="consultoria">
       <div className="flex w-full self-start items-center justify-between">
         <div className="flex flex-col gap-0.75">
           <Heading titleBold="consultoria" title="online" color="dark" />
