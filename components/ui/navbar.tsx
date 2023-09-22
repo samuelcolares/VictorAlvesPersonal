@@ -25,7 +25,7 @@ const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 
 export const NavbarDesktop = () => {
   return (
-    <nav className="hidden lg:flex items-center gap-[3.75rem] grow-1 animate-ping-test">
+    <nav className="hidden lg:flex items-center gap-[3.75rem] grow-1">
       {links.map((item, idx) => (
         <Link
           href={item.href}

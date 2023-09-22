@@ -14,11 +14,39 @@ const Landing = styled.header`
   background-attachment: fixed;
   box-shadow: 0px -6.25em 6.25em 0em #1a1b1a inset;
   overflow: hidden;
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: #000;
+    z-index: 1000;
+    animation: warp 0.5s ease 1.5s forwards;
+  }
+  section,
+  nav {
+    animation: ping 0.4s cubic-bezier(0, 0, 0.2, 1) 1.5s reverse forwards;
+  }
 
   div.landing-button-wrapper {
     &:hover .effect {
       top: 0;
       left: 0;
+    }
+  }
+  @keyframes warp {
+    100% {
+      position: unset;
+      background-color: transparent;
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+    }
+  }
+  @keyframes ping {
+    75%,
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
   }
   @media screen and (max-width: 1024px) {
@@ -73,11 +101,8 @@ const LandingSection = () => {
     <Landing className="scroll bg-dark relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2">
       {/* <NavbarMobile /> */}
       <NavbarDesktop />
-      <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem] animate-ping-test">
-        <h1
-          aria-label="Logo Victor Alves"
-          className="h-[8.5rem] w-[30.86rem]"
-        >
+      <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem]">
+        <h1 aria-label="Logo Victor Alves" className="h-[8.5rem] w-[30.86rem]">
           <Image
             className="w-full h-full object-cover"
             src={"/images/VALOGO.png"}
