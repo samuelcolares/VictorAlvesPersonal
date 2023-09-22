@@ -11,7 +11,7 @@ const blinker = Blinker({
 
 export const metadata: Metadata = {
   title: "Victor Alves Personal",
-  description: "Entre agora para o VATEAM",
+  description: "Entre agora para o #TEAMALVES!",
   // icons:{
   //   icon:{
   //     './icon.png'
