@@ -244,6 +244,7 @@ const config: Config = {
         button: "0.75rem 0.75rem 0px 0px #5754A8",
         landing: "0.75rem 0.75rem 0.75rem 0px rgba(239, 239, 239, 0.12)",
         card: "-.75rem .25rem 3.75rem 0px rgba(62, 64, 149, 0.12)",
+        mobileCard: "-0.0625rem .125rem 1rem rgba(62, 64, 149, 0.42);",
         gifcard: "-0.25rem 0.25rem 1.25rem 0px rgba(250, 250, 250, 0.04)",
       },
       dropShadow: {

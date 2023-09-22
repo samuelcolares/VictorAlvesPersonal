@@ -70,8 +70,8 @@ const Landing = styled.header`
 
 const LandingSection = () => {
   return (
-    <Landing className="scroll relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2">
-      <NavbarMobile />
+    <Landing className="scroll bg-dark relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2">
+      {/* <NavbarMobile /> */}
       <NavbarDesktop />
       <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem] animate-ping-test">
         <h1

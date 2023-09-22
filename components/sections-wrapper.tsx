@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   background-image: url("./images/logo-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media screen and (max-width:1024px) {
+    background-position:left;
+  }
 `;
 
 const VideosPlusFeedbacks = () => {

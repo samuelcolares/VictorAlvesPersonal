@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Instagram } from "lucide-react";
 import MenuIcon from "./menu-icon";
+import { cn } from "@/lib/util";
 
 const links = [
   { link: "Consultoria", href: "#consultoria" },
@@ -51,59 +52,59 @@ export const NavbarMobile = () => {
   const [backgroundColor, setBackgroundColor] = useState("#fff");
   const [open, setOpen] = useState<boolean>(false);
   const openMenu = () => (open ? setOpen(false) : setOpen(true));
-  useEffect(() => {
-    const button = buttonRef.current;
-    const landing = document.querySelector("header")!;
-    const sobremim = document.getElementById("sobremim")!;
-    const consultoria = document.getElementById("consultoria")!;
-    const videos = document.getElementById("videos")!;
-    const feedbacks = document.getElementById("feedbacks")!;
-    // const planos = document.getElementById("planos")!;
+  // useEffect(() => {
+  //   const button = buttonRef.current;
+  //   const landing = document.querySelector("header")!;
+  //   const sobremim = document.getElementById("sobremim")!;
+  //   const consultoria = document.getElementById("consultoria")!;
+  //   const videos = document.getElementById("videos")!;
+  //   const feedbacks = document.getElementById("feedbacks")!;
+  //   // const planos = document.getElementById("planos")!;
 
-    const handleScroll = () => {
-      const buttonPosition =
-        button!.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY > landing.clientHeight + sobremim.clientHeight) {
-        setBackgroundColor("#1A1B1A");
-      } else {
-        setBackgroundColor("#F5f5f5");
-      }
+  //   const handleScroll = () => {
+  //     const buttonPosition =
+  //       button!.getBoundingClientRect().top + window.scrollY;
+  //     if (window.scrollY > landing.clientHeight + sobremim.clientHeight) {
+  //       setBackgroundColor("#1A1B1A");
+  //     } else {
+  //       setBackgroundColor("#F5f5f5");
+  //     }
 
-      if (
-        window.scrollY >
-          landing.clientHeight +
-            sobremim.clientHeight +
-            consultoria.clientHeight &&
-        window.scrollY <
-          landing.clientHeight +
-            sobremim.clientHeight +
-            consultoria.clientHeight +
-            videos.clientHeight +
-            feedbacks.clientHeight
-      ) {
-        setBackgroundColor("#F5f5f5");
-      }
+  //     if (
+  //       window.scrollY >
+  //         landing.clientHeight +
+  //           sobremim.clientHeight +
+  //           consultoria.clientHeight &&
+  //       window.scrollY <
+  //         landing.clientHeight +
+  //           sobremim.clientHeight +
+  //           consultoria.clientHeight +
+  //           videos.clientHeight +
+  //           feedbacks.clientHeight
+  //     ) {
+  //       setBackgroundColor("#F5f5f5");
+  //     }
 
-      if (
-        window.scrollY >
-        landing.clientHeight +
-          sobremim.clientHeight +
-          consultoria.clientHeight +
-          videos.clientHeight +
-          feedbacks.clientHeight
-      ) {
-        setBackgroundColor("#1A1B1A");
-      }
-    };
+  //     if (
+  //       window.scrollY >
+  //       landing.clientHeight +
+  //         sobremim.clientHeight +
+  //         consultoria.clientHeight +
+  //         videos.clientHeight +
+  //         feedbacks.clientHeight
+  //     ) {
+  //       setBackgroundColor("#1A1B1A");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [backgroundColor]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [backgroundColor]);
   return (
-    <nav className="px-1 fixed z-[100] lg:hidden">
+    <nav className={cn("px-1 absolute z-[100] lg:hidden", open && "fixed")}>
       <button
         className="menuicon relative z-[500]"
         ref={buttonRef}

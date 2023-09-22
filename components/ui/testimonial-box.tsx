@@ -18,7 +18,7 @@ const TestCards = [
   },
 ];
 
-const TestimonialBox = () => {
+export const TestimonialBox = () => {
   const mappedCards = TestCards.map((item, idx) => (
     <SwiperSlide key={idx}>
       <TestimonialCard
@@ -69,33 +69,81 @@ const TestimonialBox = () => {
         className="mySwiper4"
       >
         {mappedCards}
-        {/* <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-dark"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-primary500"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-dark"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-primary600"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-primary500"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-red-900"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-slate-400"/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="w-[55rem] p-1.5 rounded h-[16.9375rem] bg-primary800"/>
-        </SwiperSlide> */}
       </Swiper>
     </div>
   );
 };
 
-export default TestimonialBox;
+export const TestimonialBoxMobile = () => {
+  return (
+    <div className="w-full overflow-hidden">
+      <Swiper
+        grabCursor={true}
+        effect={"creative"}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper4 w-full"
+      >
+        <SwiperSlide>
+          <TestimonialCard
+            instagram={TestCards[0].instagram}
+            mes={TestCards[0].mes}
+            ano={TestCards[0].ano}
+            depoimento={TestCards[0].depoimento}
+            image={
+              <Image
+                src={TestCards[0].image}
+                alt={TestCards[0].instagram}
+                width={60}
+                height={60}
+                className="w-full h-full object-cover"
+              />
+            }
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard
+            instagram={TestCards[0].instagram}
+            mes={TestCards[0].mes}
+            ano={TestCards[0].ano}
+            depoimento={TestCards[0].depoimento}
+            image={
+              <Image
+                src={TestCards[0].image}
+                alt={TestCards[0].instagram}
+                width={60}
+                height={60}
+                className="w-full h-full object-cover"
+              />
+            }
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard
+            instagram={TestCards[0].instagram}
+            mes={TestCards[0].mes}
+            ano={TestCards[0].ano}
+            depoimento={TestCards[0].depoimento}
+            image={
+              <Image
+                src={TestCards[0].image}
+                alt={TestCards[0].instagram}
+                width={60}
+                height={60}
+                className="w-full h-full object-cover"
+              />
+            }
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
+};

@@ -50,18 +50,12 @@ const HomePage = () => {
       </main>
     );
   return (
-    <main>
+    <main className="bg-dark">
       <LandingSection />
       <SobreMim />
-      {/* <div className="h-[100vh] scroll bg-dark" id="sobremim"></div> */}
-      <div className="h-[100vh] scroll bg-white" id="consultoria"></div>
-      <div className="h-[100vh] scroll bg-dark" id="videos"></div>
-      <div className="h-[100vh] scroll bg-dark" id="feedbacks"></div>
-      <div className="h-[100vh] scroll bg-white" id="planos"></div>
-      {/* 
       <Servicos />
       <VideosPlusFeedbacks />
-      <Planos/> */}
+      <Planos />
     </main>
   );
 };

@@ -15,12 +15,18 @@ const videosGif = [
   "/images/videos/ezgif.com-crop-6.gif",
 ];
 
+const mobileGif = [
+  "/images/videos/ezgif.com-crop.gif",
+  "/images/videos/ezgif.com-crop-2.gif",
+  "/images/videos/ezgif.com-crop-7.gif",
+];
+
 const VideosExplicativos = () => {
   return (
-    <section className="scroll py-2 px-[5rem] flex justify-between items-center" id="videos">
-      <article className="flex flex-col gap-2 shrink-0 w-[46.9375rem]">
+    <section className="scroll lg:py-2 lg:px-[5rem] p-1 pb-2 flex justify-between lg:items-center flex-col lg:flex-row lg:gap-0 gap-1.5" id="videos">
+      <article className="flex flex-col gap-0.5 lg:gap-2 shrink-0 lg:w-[46.9375rem]">
         <Heading titleBold="vídeos" title="explicativos" color="text-white" />
-        <p className="text-1.5 leading-button tracking-wide text-white">
+        <p className="lg:text-1.5 lg:leading-button tracking-wide text-white w-[95%]">
           Juntamente á planilha de treino, a consultoria online conta com vídeos
           dos exercícios, variações, alongamentos e mobilidade para te auxiliar
           no aprendizado. Tudo adaptado e feito para você, com base nas suas
@@ -28,8 +34,11 @@ const VideosExplicativos = () => {
           24hrs para eventuais dúvidas.
         </p>
       </article>
-      <CardsWrapper className="grid grid-cols-gifcard w-fit gap-x-2 gap-y-1">
+      <CardsWrapper className="hidden lg:grid grid-cols-gifcard w-fit gap-x-2 gap-y-1">
         {videosGif.map((item, idx)=> <GifCard src={item} key={idx}/>)}
+      </CardsWrapper>
+      <CardsWrapper className="lg:hidden flex gap-[0.25rem] justify-center">
+        {mobileGif.map((item, idx)=> <GifCard src={item} key={idx}/>)}
       </CardsWrapper>
     </section>
   );

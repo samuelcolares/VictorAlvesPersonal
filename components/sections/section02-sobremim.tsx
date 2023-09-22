@@ -61,7 +61,6 @@ const SobreMim = () => {
         <Heading
           titleBold="sobre"
           title="mim"
-          className="lg:w-[15.125rem] w-fit pr-1"
           color="text-white"
         />
         <p className="hidden lg:block text-1.25 text-white font-medium leading-[1.5rem] tracking-[0.025rem]">
