@@ -14,17 +14,20 @@ const Landing = styled.header`
   background-attachment: fixed;
   box-shadow: 0px -6.25em 6.25em 0em #1a1b1a inset;
   overflow: hidden;
-  &::before {
+  background-color: black;
+  background-blend-mode: color-burn;
+  animation: warp 1.3s ease forwards;
+  /* &::before {
     content: "";
     position: fixed;
     inset: 0;
     background-color: #000;
     z-index: 1000;
     animation: warp 0.5s ease 1.5s forwards;
-  }
+  } */
   section,
   nav {
-    animation: ping 0.4s cubic-bezier(0, 0, 0.2, 1) 1.5s reverse forwards;
+    animation: ping 0.4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;
   }
 
   div.landing-button-wrapper {
@@ -35,11 +38,7 @@ const Landing = styled.header`
   }
   @keyframes warp {
     100% {
-      position: unset;
-      background-color: transparent;
-      opacity: 0;
-      display: none;
-      visibility: hidden;
+     background-color: transparent;
     }
   }
   @keyframes ping {

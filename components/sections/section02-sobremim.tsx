@@ -7,8 +7,7 @@ import styled from "styled-components";
 
 const About = styled.section`
   @media screen and (max-width: 1024px) {
-    padding: 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem 1rem;
     gap: 1.25rem;
     & > div {
       height: 10.27906rem;

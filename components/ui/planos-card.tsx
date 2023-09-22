@@ -190,7 +190,7 @@ const CardMobile = styled.div`
   border: 0.25rem solid #3e4095;
   border-radius: 1.8rem;
   padding: 1.125rem;
-  background-color: #fafafa;
+  background: linear-gradient(0deg, black, #3e4095);
   color: #1a1b1a;
   display: flex;
   flex-direction: column;
@@ -262,7 +262,6 @@ const CardMobileWrapper = styled.div`
     }
     .swiper-slide-active {
       & > div {
-        background: linear-gradient(0deg, black, #3e4095) !important;
         color: #f5f5f5;
         transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
         border-color: white;

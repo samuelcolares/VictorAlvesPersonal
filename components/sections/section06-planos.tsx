@@ -6,7 +6,7 @@ import {PlanosCards, PlanosCardsMobile} from "@/components/ui/planos-card";
 const Planos = () => {
   return (
     <section
-      className="scroll bg-white lg:py-2 lg:px-[5rem] p-1 pb-2 flex flex-col"
+      className="scroll bg-white lg:py-2 lg:px-[5rem] px-1 py-2 flex flex-col"
       id="planos"
     >
       <div className="flex flex-col items-center justify-center gap-0.75 mb-2">

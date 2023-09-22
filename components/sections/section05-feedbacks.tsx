@@ -18,7 +18,7 @@ import HorizontalCarroussel from "@/components/ui/horizontal-carroussel";
 const Feedbacks = () => {
   return (
     <section
-      className="scroll lg:block lg:py-2 lg:px-[5rem] p-1 pb-2 flex flex-col gap-0.75"
+      className="scroll lg:block lg:py-2 lg:px-[5rem] px-1 py-2 flex flex-col gap-0.75"
       id="feedbacks"
     >
       <div className="flex items-center justify-between lg:mb-2">
@@ -49,7 +49,7 @@ const Feedbacks = () => {
       <div className="w-full lg:hidden">
         <HorizontalCarroussel />
       </div>
-      <div>
+      <div className="w-full lg:hidden">
         <TestimonialBoxMobile />
       </div>
       <Button text="Ver mais resultados" classname="lg:hidden mx-auto" />

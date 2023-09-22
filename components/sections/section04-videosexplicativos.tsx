@@ -23,7 +23,7 @@ const mobileGif = [
 
 const VideosExplicativos = () => {
   return (
-    <section className="scroll lg:py-2 lg:px-[5rem] p-1 pb-2 flex justify-between lg:items-center flex-col lg:flex-row lg:gap-0 gap-1.5" id="videos">
+    <section className="scroll lg:py-2 lg:px-[5rem] px-1 py-2 flex justify-between lg:items-center flex-col lg:flex-row lg:gap-0 gap-1.5" id="videos">
       <article className="flex flex-col gap-0.5 lg:gap-2 shrink-0 lg:w-[46.9375rem]">
         <Heading titleBold="vídeos" title="explicativos" color="text-white" />
         <p className="lg:text-1.5 lg:leading-button tracking-wide text-white w-[95%]">

@@ -18,8 +18,8 @@ const Consultoria = styled.section`
     display: none;
   }
   @media screen and (max-width: 1024px) {
-    padding: 1rem;
-    padding-bottom: 1.5rem;
+    padding: 2rem 1rem;
+    /* padding-bottom: 1.5rem; */
     gap: 0;
     .mySwiperCards {
       display: block;

@@ -21,6 +21,7 @@ const GifCard = ({ src }: { src: string }) => {
         width={420}
         height={420}
         className="w-full h-full object-cover"
+        priority
       />
     </div>
   );
