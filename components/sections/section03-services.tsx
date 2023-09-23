@@ -43,27 +43,27 @@ const cartoes = [
   {
     icon: <PenSquare className="w-2.5 h-2.5  min-h-[2.5rem]" />,
     title: "ANAMNESE",
-    desc: "Será enviada uma ficha de anamnese para poder entender sua rotina, hábitos, particularidades e preferências e objetivos. ",
+    desc: "Será enviada uma ficha de anamnese para poder entender sua rotina, hábitos, particularidades, preferências e objetivos. ",
   },
   {
     icon: <ClipboardList className="w-2.5 h-2.5  min-h-[2.5rem]" />,
     title: "Planejamento",
-    desc: "Após a anamnese, irei iniciar a montagem do planejamento de treino, com base em todas as suas individualidades e informações.",
+    desc: "Concluída a anamnese, irei iniciar a montagem de um planejamento de treino com base em todas as suas individualidades e informações.",
   },
   {
     icon: <Dumbbell className="w-2.5 h-2.5  min-h-[2.5rem]" />,
     title: "Implementar",
-    desc: "Irei lhe encaminhar o protocolo de treino e você irá poder conversar comigo pelo WhatsApp para tirar todas as dúvidas.",
+    desc: "Chegou a hora de iniciar seu novo protocolo de treinamentos! Lembre-se que estarei disponível para responder suas dúvidas referentes aos exercícios.",
   },
   {
     icon: <Camera className="w-2.5 h-2.5  min-h-[2.5rem]" />,
     title: "Feedback",
-    desc: "Após um período de protocolo, você poderá enviar fotos para avaliação física, e analisaremos juntos os resultados.",
+    desc: "Após um período de protocolo você poderá enviar fotos para avaliação física e analisaremos juntos os resultados.",
   },
   {
     icon: <Rocket className="w-2.5 h-2.5  min-h-[2.5rem]" />,
     title: "EVOLUÇÃO CONTÍNUA",
-    desc: "Texto",
+    desc: "A partir deste momento retornamos a etapa de anamnese para poder aperfeiçoar e otimizar seus resultados para o próximo protocolo de treinamentos.",
   },
 ];
 
@@ -86,8 +86,8 @@ const Servicos = () => {
         <div className="flex flex-col gap-0.75">
           <Heading titleBold="consultoria" title="online" color="dark" />
           <p className="text-1.25 font-medium leading-button tracking-wide">
-            Como funciona a minha consultoria? Entenda um pouco as etapas e
-            venha fazer parte do time.
+            Como funciona a consultoria? Entenda um pouco de cata etapa e
+            venha fazer parte do time!
           </p>
           <h3 className="text-1.25 font-medium leading-button tracking-wide ">
             A partir de{" "}

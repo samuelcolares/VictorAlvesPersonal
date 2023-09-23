@@ -8,8 +8,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      animation:{
-        'ping-test': "ping .4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;"
+      backgroundImage: {
+       gif1: "url('https://imgur.com/aV1FE2B.gif')",
+       gif2: "url('https://imgur.com/ZtPovSN.gif')",
+       gif3: "url('https://imgur.com/RfpSpb7.gif')",
+       gif4: "url('https://imgur.com/xo6Fp9h.gif')",
+       gif5: "url('https://imgur.com/E6IXzj5.gif')",
+       gif6: "url('https://imgur.com/0PHEKiu.gif')",
+      },
+      animation: {
+        "ping-test": "ping .4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;",
       },
       fontSize: {
         "0.25": "0.25rem",

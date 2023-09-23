@@ -14,6 +14,7 @@ import {
   TestimonialBoxMobile,
 } from "@/components/ui/testimonial-box";
 import HorizontalCarroussel from "@/components/ui/horizontal-carroussel";
+import Link from "next/link";
 
 const Feedbacks = () => {
   return (
@@ -29,14 +30,19 @@ const Feedbacks = () => {
             <span className="border-b border-primary500 font-bold">
               <span className="text-primary400">#</span>
               <span>TEAM</span>
-              <span className="text-primary400">ALVES!</span>
+              <span className="text-primary400">ALVES</span>
             </span>{" "}
             <span className=" ">
-              Venha também fazer parte dessas evoluções.
+              e venha também fazer parte dessas evoluções.
             </span>
           </p>
         </div>
-        <Button text="Ver mais resultados" classname="hidden lg:block" />
+        <Link
+          href={"https://instagram.com/victoralvespersonal_"}
+          target="_blank"
+        >
+          <Button text="Ver mais resultados" classname="hidden lg:block" />
+        </Link>
       </div>
       <div className="lg:flex items-center gap-3 hidden">
         <VerticalCarroussel />
@@ -52,7 +58,12 @@ const Feedbacks = () => {
       <div className="w-full lg:hidden">
         <TestimonialBoxMobile />
       </div>
-      <Button text="Ver mais resultados" classname="lg:hidden mx-auto" />
+      <Link
+        href={"https://instagram.com/victoralvespersonal_"}
+        target="_blank"
+      >
+        <Button text="Ver mais resultados" classname="lg:hidden mx-auto" />
+      </Link>
     </section>
   );
 };

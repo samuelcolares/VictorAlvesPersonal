@@ -9,14 +9,14 @@ import { NavbarDesktop, NavbarMobile } from "../ui/navbar";
 const Landing = styled.header`
   font-size: 1em;
   height: 100vh;
-  background: url("./images/section_home.png") no-repeat center;
+  background: url("./images/section_home.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   box-shadow: 0px -6.25em 6.25em 0em #1a1b1a inset;
   overflow: hidden;
-  background-color: black;
-  background-blend-mode: color-burn;
-  animation: warp 1.3s ease forwards;
+  /* background-color: black;
+  background-blend-mode: color-burn; */
+  /* animation: warp 1.3s ease forwards; */
   /* &::before {
     content: "";
     position: fixed;
@@ -50,9 +50,9 @@ const Landing = styled.header`
   }
   @media screen and (max-width: 1024px) {
     /* height: 800px; */
-    background: url("./images/section_home_mobile.png") no-repeat center;
-    background-color: #1a1b1abf;
-    background-blend-mode: overlay;
+    background: url("./images/section_home_mobile.jpg") no-repeat center;
+    background-color: #1a1b1abf !important;
+    background-blend-mode: overlay !important;
     background-size: cover;
     justify-content: space-between;
 

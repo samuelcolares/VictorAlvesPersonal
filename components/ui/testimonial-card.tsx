@@ -25,7 +25,7 @@ const TestimonialCard: React.FC<CardProps> = ({
     );
 
   return (
-    <div className="lg:w-[55rem] lg:p-1.5 py-[0.5rem] px-[1.5rem] rounded lg:h-[16.9375rem] bg-white flex flex-col gap-0.75 justify-between cursor-default">
+    <div className="lg:w-[55rem] h-[18.25rem] lg:p-1.5 py-[0.5rem] px-[1.5rem] rounded lg:h-[16.9375rem] bg-white flex flex-col gap-0.75 justify-between cursor-default">
       <header className="flex items-center gap-0.75">
         <div className="rounded-full w-3.75 h-3.75 border-[.2rem] border-primary950 overflow-hidden">
           {image}
@@ -38,11 +38,11 @@ const TestimonialCard: React.FC<CardProps> = ({
         </p>
       </header>
       <div className="flex">
-        <Quote className="rotate-180 text-primary950 h-fit w-3 self-start" />
-        <p className="lg:text-1.5 text-dark lg:font-medium leading-[1.5rem] tracking-wide lg:p-1 indent-[.5rem]">
+        <Quote className="hidden lg:block rotate-180 text-primary950 h-fit w-3 self-start" />
+        <p className="lg:text-1.5 text-dark lg:font-medium leading-[1.5rem] tracking-wide lg:p-1 lg:indent-[.5rem]">
           {depoimento}
         </p>
-        <Quote className="self-end text-primary950 h-fit w-3" />
+        <Quote className="hidden lg:block  self-end text-primary950 h-fit w-3" />
       </div>
       <footer className="lg:text-1.25 text-center">
         <span className="font-bold">

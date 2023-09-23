@@ -56,7 +56,7 @@ const VerticalCarroussel = () => {
       >
         <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/kauan.png"}
+            src={"/images/feedbacks/vertical/kauan.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
@@ -74,7 +74,7 @@ const VerticalCarroussel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/ss.png"}
+            src={"/images/feedbacks/vertical/ss.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
@@ -83,7 +83,7 @@ const VerticalCarroussel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/kauan.png"}
+            src={"/images/feedbacks/vertical/ingrid.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
@@ -92,22 +92,22 @@ const VerticalCarroussel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/samuel.png"}
+            src={"/images/feedbacks/vertical/andressa.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
             className="object-cover w-[42.21rem] h-[31.08431rem] rounded-[1.75619rem]"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/ss.png"}
+            src={"/images/feedbacks/vertical/ss.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
             className="object-cover w-[42.21rem] h-[31.08431rem] rounded-[1.75619rem]"
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </SW>
   );

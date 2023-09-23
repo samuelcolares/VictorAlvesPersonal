@@ -50,18 +50,18 @@ type MobileCardProps = {
 };
 
 export const MobileCard: React.FC<MobileCardProps> = ({ cartoes }) => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
+  // const pagination = {
+  //   clickable: true,
+  //   renderBullet: function (index: number, className: string) {
+  //     return '<span class="' + className + '">' + (index + 1) + "</span>";
+  //   },
+  // };
 
   const mappedCards = cartoes.map((item, idx) => (
     <SwiperSlide key={idx}>
-      <div className="w-[17.5rem] h-[18.875rem] flex flex-col items-center py-3.25 px-2.5 bg-white rounded-xl shadow-mobileCard my-1 mx-auto">
+      <div className="w-[17.5rem] h-[18.875rem] flex flex-col items-center lg:py-3.25 lg:px-2.5 p-2.5 bg-white rounded-xl shadow-mobileCard my-1 mx-auto">
         {item.icon}
-        <div className="py-1 text-center flex flex-col gap-1">
+        <div className="py-1 text-center flex flex-col gap-0.5">
           <h4 className="font-semibold text-1.25 leading-8 uppercase">
             {item.title}
           </h4>

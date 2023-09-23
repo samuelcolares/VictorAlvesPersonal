@@ -6,17 +6,12 @@ import GlobalStyles from "@/styles/GlobalStyles";
 
 const blinker = Blinker({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
   title: "Victor Alves Personal",
   description: "Entre agora para o #TEAMALVES!",
-  // icons:{
-  //   icon:{
-  //     './icon.png'
-  //   }
-  // }
 };
 
 export default function RootLayout({

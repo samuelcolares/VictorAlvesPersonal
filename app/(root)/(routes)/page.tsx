@@ -12,8 +12,8 @@ import React, { useState, useEffect } from "react";
 const HomePage = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
   useEffect(() => {
+    setIsMounted(true);
     setTimeout(() => {
-      setIsMounted(true);
     }, 1500);
   }, []);
   if (!isMounted)

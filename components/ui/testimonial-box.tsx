@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCreative } from "swiper/modules";
+import { EffectCreative, Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,11 +10,25 @@ import Image from "next/image";
 
 const TestCards = [
   {
-    image: "/images/feedbacks/testimonial/vitoriagomes.png",
+    image: "/images/feedbacks/testimonial/vitoriagomes.jpg",
     instagram: "vitoriagomys",
     depoimento: `Indico muito a consultoria do Victor. A forma como ele monta os treinos e demonstra interesse em entender cada ponto do seu objetivo é demais.`,
     mes: "setembro",
     ano: 2022,
+  },
+  {
+    image: "/images/feedbacks/testimonial/ingridlima.jpg",
+    instagram: "ingriiddlima",
+    depoimento: `Estou em acompanhamento com o Victor já faz um tempo e indico de olhos fechados. Um excelente profissional e super atencioso. Está sempre ali dando um suporte e o treino é individualizado de acordo com sua necessidade. Se você entrar nesse time, a evolução é garantida!`,
+    mes: "Dezembro",
+    ano: 2022,
+  },
+  {
+    image: "/images/feedbacks/testimonial/andressa.jpg",
+    instagram: "andressabsh",
+    depoimento: `Excelente profissional, sempre atencioso e prestativo. Desde que iniciei o acompanhamento com o Victor, notei o quanto é importante ter um treino especializado e um bom profissional nos acompanhando. Indico de olhos fechados.`,
+    mes: "Junho",
+    ano: 2023,
   },
 ];
 
@@ -65,7 +79,12 @@ export const TestimonialBox = () => {
             translate: ["100%", 0, 0],
           },
         }}
-        modules={[EffectCreative]}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[EffectCreative, Autoplay]}
         className="mySwiper4"
       >
         {mappedCards}
@@ -75,6 +94,25 @@ export const TestimonialBox = () => {
 };
 
 export const TestimonialBoxMobile = () => {
+  const mappedCards = TestCards.map((item, idx) => (
+    <SwiperSlide key={idx}>
+      <TestimonialCard
+        instagram={item.instagram}
+        mes={item.mes}
+        ano={item.ano}
+        depoimento={item.depoimento}
+        image={
+          <Image
+            src={item.image}
+            alt={item.instagram}
+            width={60}
+            height={60}
+            className="w-full h-full object-cover"
+          />
+        }
+      />
+    </SwiperSlide>
+  ));
   return (
     <div className="w-full overflow-hidden">
       <Swiper
@@ -89,60 +127,15 @@ export const TestimonialBoxMobile = () => {
             translate: ["100%", 0, 0],
           },
         }}
-        modules={[EffectCreative]}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[EffectCreative, Autoplay]}
         className="mySwiper4 w-full"
       >
-        <SwiperSlide>
-          <TestimonialCard
-            instagram={TestCards[0].instagram}
-            mes={TestCards[0].mes}
-            ano={TestCards[0].ano}
-            depoimento={TestCards[0].depoimento}
-            image={
-              <Image
-                src={TestCards[0].image}
-                alt={TestCards[0].instagram}
-                width={60}
-                height={60}
-                className="w-full h-full object-cover"
-              />
-            }
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard
-            instagram={TestCards[0].instagram}
-            mes={TestCards[0].mes}
-            ano={TestCards[0].ano}
-            depoimento={TestCards[0].depoimento}
-            image={
-              <Image
-                src={TestCards[0].image}
-                alt={TestCards[0].instagram}
-                width={60}
-                height={60}
-                className="w-full h-full object-cover"
-              />
-            }
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard
-            instagram={TestCards[0].instagram}
-            mes={TestCards[0].mes}
-            ano={TestCards[0].ano}
-            depoimento={TestCards[0].depoimento}
-            image={
-              <Image
-                src={TestCards[0].image}
-                alt={TestCards[0].instagram}
-                width={60}
-                height={60}
-                className="w-full h-full object-cover"
-              />
-            }
-          />
-        </SwiperSlide>
+        {mappedCards}
       </Swiper>
     </div>
   );
