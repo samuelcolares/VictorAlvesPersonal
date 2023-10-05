@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import VideosExplicativos from "@/components/sections/section04-videosexplicativos";
-import Feedbacks from "@/components/sections/section05-feedbacks";
+import VideosExplicativos from "@/app/(root)/(routes)/_components/sections/section04-videosexplicativos";
+import Feedbacks from "@/app/(root)/(routes)/_components/sections/section05-feedbacks";
 
 const Wrapper = styled.div`
   background-image: url("./images/logo-bg.png");

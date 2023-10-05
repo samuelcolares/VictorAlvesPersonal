@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import GifCard from "../ui/gif-card";
-import Heading from "../ui/heading";
+import GifCard from "../../../../../components/ui/gif-card";
+import Heading from "../../../../../components/ui/heading";
 
 const CardsWrapper = styled.div`
   @media screen and (max-width: 1250px) {
