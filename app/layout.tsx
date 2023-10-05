@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Blinker } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyles from "@/styles/GlobalStyles";
+import Footer from "@/components/ui/footer";
 
 const blinker = Blinker({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <GlobalStyles />
           {children}
+          <Footer/>
         </StyledComponentsRegistry>
       </body>
     </html>

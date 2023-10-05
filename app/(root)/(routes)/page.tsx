@@ -1,9 +1,8 @@
 "use client";
 import VideosPlusFeedbacks from "@/components/sections-wrapper";
-import LandingSection from "@/components/sections/section01-landing";
-import SobreMim from "@/components/sections/section02-sobremim";
-import Servicos from "@/components/sections/section03-services";
-import Planos from "@/components/sections/section06-planos";
+import LandingSection from "./_components/sections/section01-landing";
+import SobreMim from "./_components/sections/section02-sobremim";
+import Planos from "./_components/sections/section06-planos";
 import { NavbarMobile } from "@/components/ui/navbar";
 import Image from "next/image";
 
@@ -53,7 +52,6 @@ const HomePage = () => {
     <main className="bg-dark">
       <LandingSection />
       <SobreMim />
-      <Servicos />
       <VideosPlusFeedbacks />
       <Planos />
     </main>

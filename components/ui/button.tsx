@@ -5,7 +5,15 @@ import { cn } from "@/lib/util";
 // export interface ButtonProps
 //   extends React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ text, classname }: { text: string; classname?: string }) => {
+const Button = ({
+  text,
+  classname,
+  children,
+}: {
+  text: string;
+  classname?: string;
+  children?: React.ReactNode;
+}) => {
   return (
     <button
       className={cn(
@@ -16,6 +24,7 @@ const Button = ({ text, classname }: { text: string; classname?: string }) => {
       <span className=" text-base font-bold uppercase leading-button tracking-button">
         {text}
       </span>
+      {children}
     </button>
   );
 };

@@ -22,7 +22,7 @@ type CardProps = {
 
 export const Card: React.FC<CardProps> = ({ icon, title, desc, idx }) => {
   return (
-    <article>
+    <article className="cons-card">
       <div className="flex flex-col gap-0.5 px-1 mb-1.25">
         <span className="w-1.25 h-1.25 text-primary950 flex items-center justify-center text-1.5">
           {idx}
@@ -32,7 +32,7 @@ export const Card: React.FC<CardProps> = ({ icon, title, desc, idx }) => {
           <div className="bg-primary950 w-full h-[.25rem] " />
         </div>
       </div>
-      <div className="w-[22.5rem] h-[26.875rem] flex flex-col items-center py-3.25 px-2.5 bg-white rounded-xl shadow-card lg:hover:scale-110 lg:hover:shadow-2xl transition">
+      <div className="w-[22.5em] h-[26.875em] flex flex-col items-center py-3.25 px-2.5 bg-white rounded-xl shadow-card lg:hover:scale-110 lg:hover:shadow-2xl transition">
         {icon}
         <div className="py-1 text-center flex flex-col gap-1">
           <h4 className="font-semibold text-1.5 leading-8 uppercase">

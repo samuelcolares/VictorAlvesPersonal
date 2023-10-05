@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Button from "@/components/ui/button";
 import Heading from "@/components/ui/heading";
 import {
   PenSquare,
@@ -16,6 +15,37 @@ import styled from "styled-components";
 const Consultoria = styled.section`
   .mySwiperCards {
     display: none;
+  }
+
+  @media screen and (max-width: 1700px) {
+    .cons-card {
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .cons-card {
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    .cons-card {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .cons-card {
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    .cons-card {
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .cons-card {
+      font-size: 9.5px;
+    }
   }
   @media screen and (max-width: 1024px) {
     padding: 2rem 1rem;
@@ -79,43 +109,21 @@ const Servicos = () => {
   ));
   return (
     <Consultoria
-      className="scroll bg-white lg:py-2 lg:px-[5em] lg:flex flex-col items-center gap-1.25 overflow-hidden"
+      className="scroll bg-white lg:pt-2 lg:pb-4 lg:px-[5em] lg:flex flex-col items-center gap-1.25 overflow-hidden"
       id="consultoria"
     >
       <div className="flex w-full self-start items-center justify-between mb-1 lg:mb-0">
         <div className="flex flex-col gap-0.75">
           <Heading titleBold="consultoria" title="online" color="dark" />
           <p className="text-1.25 font-medium leading-button tracking-wide">
-            Como funciona a consultoria? Entenda um pouco de cata etapa e
-            venha fazer parte do time!
+            Como funciona a consultoria? Entenda um pouco de cata etapa e venha
+            fazer parte do time!
           </p>
-          <h3 className="text-1.25 font-medium leading-button tracking-wide ">
-            A partir de{" "}
-            <span className="font-bold text-primary950">R$ 149,90!</span>
-          </h3>
         </div>
-        <Button text="Saiba Mais" classname="lg:block hidden" />
       </div>
-
       <div className="lg:flex hidden">{cardmaps}</div>
       <div className="w-full">
         <MobileCard cartoes={cartoes} />
-        <Button text="Saiba Mais" classname="lg:hidden mx-auto mb-2" />
-      </div>
-
-      <div className="flex w-full self-start items-center justify-between">
-        <div className="flex flex-col gap-0.75">
-          <Heading titleBold="Planilhas" title="detreino" color="dark" />
-          <p className="text-1.25 font-medium leading-button tracking-wide">
-            Planilhas de musculação prontas, com semanas periodizadas e treinos
-            para você que está começando!
-          </p>
-          <h3 className="text-1.25 font-medium leading-button tracking-wide">
-            A partir de{" "}
-            <span className="font-bold text-primary950">R$ 49,90!</span>
-          </h3>
-          <Button text="compre aqui" classname="w-fit self-center lg:self-start" />
-        </div>
       </div>
     </Consultoria>
   );

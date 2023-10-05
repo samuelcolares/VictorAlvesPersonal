@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import { NavbarDesktop, NavbarMobile } from "../ui/navbar";
+import { NavbarDesktop, NavbarMobile } from "../../../../../components/ui/navbar";
 
 const Landing = styled.header`
   font-size: 1em;
@@ -14,17 +14,6 @@ const Landing = styled.header`
   background-attachment: fixed;
   box-shadow: 0px -6.25em 6.25em 0em #1a1b1a inset;
   overflow: hidden;
-  /* background-color: black;
-  background-blend-mode: color-burn; */
-  /* animation: warp 1.3s ease forwards; */
-  /* &::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-color: #000;
-    z-index: 1000;
-    animation: warp 0.5s ease 1.5s forwards;
-  } */
   section,
   nav {
     animation: ping 0.4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;
@@ -36,11 +25,7 @@ const Landing = styled.header`
       left: 0;
     }
   }
-  @keyframes warp {
-    100% {
-     background-color: transparent;
-    }
-  }
+
   @keyframes ping {
     75%,
     100% {

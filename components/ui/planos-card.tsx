@@ -2,252 +2,174 @@
 import React from "react";
 import Button from "./button";
 import styled from "styled-components";
-import { Dumbbell, Globe, TableProperties } from "lucide-react";
+import { CheckCircle, Dumbbell, Globe, TableProperties } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Pagination } from "swiper/modules";
 import "swiper/css/pagination";
+import Link from "next/link";
 
-const PlanosWrapper = styled.div`
-  height: 50.625rem;
-  width: fit-content;
-  margin: 000 auto;
-  /* &:hover > :not(:hover) {
-    height: 45rem;
-    width: 29.25rem;
-    background-color: #fafafa;
-    color: #1a1b1a;
-  } */
-`;
+const personalTraining = [
+  "Treino individualizado",
+  "Acompanhamento de evolução",
+  "Treinos e avaliações presenciais",
+  "Esclarecimento de dúvidas 24hrs",
+  "Apenas Fortaleza e Eusébio (CE)",
+];
+
+const planilhasDeTreino = [
+  "Planilha com foco no seu objetivo",
+  "Planejamento para 4 a 8 semanas",
+  "Vídeos dos exercícios",
+];
+
+const consultoriaOnline = [
+  "Treino individualizado",
+  "Planejamento para 4 a 8 semanas",
+  "Vídeos dos exercícios",
+  "Acompanhamento de evolução",
+  "Ajustes com base no feedback semanal",
+  "Esclarecimento de dúvidas 24hrs",
+  "Avaliação postural e funcional online",
+];
 
 const Card = styled.div`
-  height: 45rem;
-  width: 29.25rem;
-  border: 0.25rem solid #3e4095;
-  border-radius: 1.8rem;
-  padding: 2.25rem 1.125rem;
-  background-color: #fafafa;
-  color: #1a1b1a;
   display: flex;
+  width: 25.625rem;
+  height: 35rem;
+  padding: 2.5rem 2rem;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.125rem;
-
-  & > div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 2.25rem 0;
-    /* width: 100%; */
-
-    & > svg {
-      align-self: center;
-      width: 1.98rem;
-      height: 1.98rem;
-    }
-
-    & > h2 {
-      align-self: center;
-      margin-top: 1.125rem;
-      margin-bottom: 1.625rem;
-      font-size: 2.25rem;
-      line-height: 2.925rem;
-      letter-spacing: 0.045rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    & > ul {
-      margin-left: -1rem;
-      list-style-type: disc;
-      display: flex;
-      flex-direction: column;
-      gap: 0.88rem;
-      li {
-        font-size: 1.35rem;
-        line-height: 1.8rem; /* 133.333% */
-        letter-spacing: 0.027rem;
-      }
-    }
-  }
-
-  & > h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.925rem;
-    letter-spacing: 0.036rem;
-  }
+  box-shadow: -12px 4px 12px 0px rgba(62, 64, 149, 0.12);
+  border-radius: 0.75rem;
+  background-color: #fafafa;
+  align-items: flex-start;
 
   &.principal {
-    width: 32rem;
-    height: 50.625rem;
-    background-color: #1a1b1a;
-    color: #fafafa;
-    gap: 1.25rem;
+    width: 25.625rem;
+    height: 42.5rem;
+  }
 
-    & > div {
-      padding: 2.5rem 0;
+  .all > button {
+    box-shadow: 0.675rem 0.675rem 0.3125rem 0px #00000034;
 
-      & > svg {
-        width: 2.75rem;
-        height: 2.75rem;
-      }
-
-      & > h2 {
-        align-self: center;
-        margin-top: 1.25rem;
-        font-size: 2.5rem;
-        line-height: 3.25rem;
-        letter-spacing: 0.05rem;
-      }
-
-      & > ul {
-        margin-left: 2rem;
-        gap: 1rem;
-        li {
-          font-size: 1.5rem;
-          line-height: 2rem;
-          letter-spacing: 0.03rem;
-        }
-      }
-    }
-
-    & > h3 {
-      text-align: center;
-      font-size: 1.8rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2.925rem;
-      letter-spacing: 0.036rem;
+    &:hover {
+      box-shadow: 0 0 #0000;
     }
   }
 `;
 
 export const PlanosCards = () => {
   return (
-    <PlanosWrapper className="group lg:flex gap-2 items-center justify-center hidden">
+    <div className="group lg:flex gap-2 items-center justify-center hidden">
       <Card className="transition-all">
         <div>
-          <TableProperties />
-          <h2>Planilha de Treino</h2>
-          <ul>
-            <li>Planilha com foco no seu objetivo</li>
-            <li>Planejamento para 4 ou 8 semanas</li>
-            <li>Vídeos dos exercícios</li>
-          </ul>
+          <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+            Planilha de Treino
+          </h3>
+          <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+            R$ 49,90
+          </h4>
         </div>
-        <h3>
-          A partir de <span className="font-bold">R$ 49,90</span>
-        </h3>
-        <Button text="comprar aqui" />
+        <ul className="flex flex-col gap-1.25 mt-2">
+          {planilhasDeTreino.map((item, idx) => (
+            <li key={idx} className="flex gap-0.5 items-center">
+              <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+              <span className="text-1.25 tracking-wide leading-button">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <Link href={"#"} className="mt-auto mx-auto">
+          <Button text="comprar aqui" />
+        </Link>
       </Card>
       <Card className="transition-all principal">
         <div>
-          <Globe />
-          <h2>Consultoria Online</h2>
-          <ul>
-            <li>Treino individualizado</li>
-            <li>Planejamento para 4 ou 8 semanas</li>
-            <li>Vídeos dos exercícios</li>
-            <li>Acompanhamento de evolução</li>
-            <li>Ajustes com base no feedback semanal</li>
-            <li>Esclarecimento de dúvidas 24hrs</li>
-            <li>Chamada de vídeo para alinhamento</li>
-            <li>Avaliação postural e funcional online</li>
-          </ul>
+          <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+            Consultoria Online
+          </h3>
+          <span className="">A partir de:</span>
+          <div className="flex gap-0.75 items-center">
+            <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+              R$ 149,90
+            </h4>
+            <span className="">por mês</span>
+          </div>
         </div>
-        <h3>
-          A partir de <span className="font-bold">R$ 149,90</span>
-        </h3>
-        <Button text="Saber Mais" />
+        <ul className="flex flex-col gap-1.25 mt-2">
+          {consultoriaOnline.map((item, idx) => (
+            <li key={idx} className="flex gap-0.5 items-center">
+              <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+              <span className="text-1.25 tracking-wide leading-button">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <Link href={"/consultoria"} className="mt-auto mx-auto all">
+          <Button
+            text="Ver Todos"
+            classname="bg-primary700 text-white border-0"
+          />
+        </Link>
       </Card>
       <Card className="transition-all">
         <div>
-          <Dumbbell />
-          <h2>Personal Training</h2>
-          <ul>
-            <li>Treino individualizado</li>
-            <li>Acompanhamento de evolução</li>
-            <li>Treinos e ajustes presenciais</li>
-            <li>Apenas Fortaleza e Eusébio (CE)</li>
-          </ul>
+          <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+            Personal Training
+          </h3>
+          <span className="">A partir de:</span>
+          <div className="flex gap-0.75 items-center">
+            <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+              R$ 219,90
+            </h4>
+            <span className="">por mês</span>
+          </div>
         </div>
-        <h3>
-          A partir de <span className="font-bold">R$ 219,90</span>
-        </h3>
+        <ul className="flex flex-col gap-1.25 mt-2">
+          {personalTraining.map((item, idx) => (
+            <li key={idx} className="flex gap-0.5 items-center">
+              <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+              <span className="text-1.25 tracking-wide leading-button">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
 
-        <Button text="Saber Mais" />
+        <Link href={"#"} className="mt-auto mx-auto">
+          <Button text="Saber Mais" />
+        </Link>
       </Card>
-    </PlanosWrapper>
+    </div>
   );
 };
 
 const CardMobile = styled.div`
-  height: 38rem;
-  width: 100%;
-  border: 0.25rem solid #3e4095;
-  border-radius: 1.8rem;
-  padding: 1.125rem;
-  background: linear-gradient(0deg, black, #3e4095);
-  color: #1a1b1a;
+  height: 45rem;
   display: flex;
+  padding: 1.25rem 1rem;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
+  box-shadow: 0px 4px 20px 0px rgba(62, 64, 149, 0.62);
+  border-radius: 0.75rem;
+  background-color: #fafafa;
+  align-items: flex-start;
+  margin: 0rem 1rem;
+  .all > button {
+    box-shadow: 0.675rem 0.675rem 0.3125rem 0px #00000034;
 
-  & > div {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-    /* width: 100%; */
-
-    & > svg {
-      align-self: center;
-      width: 1.98rem;
-      height: 1.98rem;
+    &:hover {
+      box-shadow: 0 0 #0000;
     }
-
-    & > h2 {
-      align-self: center;
-      margin-top: 1.125rem;
-      margin-bottom: 1.625rem;
-      font-size: 1.825rem;
-      line-height: 2.925rem;
-      letter-spacing: 0.045rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    & > ul {
-      /* margin-left: -.5rem; */
-      list-style-type: disc;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      li {
-        font-size: 1rem;
-        line-height: 1.8rem; /* 133.333% */
-        letter-spacing: 0.027rem;
-      }
-    }
-  }
-
-  & > h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 2.925rem;
-    letter-spacing: 0.036rem;
   }
 `;
 const CardMobileWrapper = styled.div`
+  flex: 1;
   .mySwiperPlanos {
     display: block;
+    padding: 1rem 0.25rem;
     .swiper-pagination {
       position: unset;
       margin-bottom: 1rem;
@@ -260,13 +182,13 @@ const CardMobileWrapper = styled.div`
     .swiper-pagination-bullet-active {
       background-color: #3e4095;
     }
-    .swiper-slide-active {
+    /* .swiper-slide-active {
       & > div {
         color: #f5f5f5;
         transition: color 1s cubic-bezier(0.4, 0, 0.2, 1);
         border-color: white;
       }
-    }
+    } */
   }
 `;
 export const PlanosCardsMobile = () => {
@@ -278,65 +200,97 @@ export const PlanosCardsMobile = () => {
         centeredSlides={true}
         spaceBetween={10}
         className="mySwiperPlanos w-full"
-        // loop={true}
+        loop={true}
         pagination={{ clickable: true }}
         modules={[Pagination]}
       >
         <SwiperSlide>
           <CardMobile className="transition-all">
             <div>
-              <TableProperties />
-              <h2>Planilha de Treino</h2>
-              <ul>
-                <li>Planilha com foco no seu objetivo</li>
-                <li>Planejamento para 4 ou 8 semanas</li>
-                <li>Vídeos dos exercícios</li>
-              </ul>
+              <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+                Planilha de Treino
+              </h3>
+              <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+                R$ 49,90
+              </h4>
             </div>
-            <h3>
-              A partir de <span className="font-bold">R$ 49,90</span>
-            </h3>
-            <Button text="comprar aqui" />
+            <ul className="flex flex-col gap-1.25 mt-2">
+              {planilhasDeTreino.map((item, idx) => (
+                <li key={idx} className="flex gap-0.5 items-center">
+                  <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+                  <span className="text-1.25 tracking-wide leading-button">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link href={"#"} className="mt-auto mx-auto">
+              <Button text="comprar aqui" />
+            </Link>
           </CardMobile>
         </SwiperSlide>
         <SwiperSlide>
           <CardMobile className="transition-all principal">
             <div>
-              <Globe />
-              <h2>Consultoria Online</h2>
-              <ul>
-                <li>Treino individualizado</li>
-                <li>Planejamento para 4 ou 8 semanas</li>
-                <li>Vídeos dos exercícios</li>
-                <li>Acompanhamento de evolução</li>
-                <li>Ajustes com base no feedback semanal</li>
-                <li>Esclarecimento de dúvidas 24hrs</li>
-                <li>Chamada de vídeo para alinhamento</li>
-                <li>Avaliação postural e funcional online</li>
-              </ul>
+              <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+                Consultoria Online
+              </h3>
+              <span className="">A partir de:</span>
+              <div className="flex gap-0.75 items-center">
+                <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+                  R$ 149,90
+                </h4>
+                <span className="">por mês</span>
+              </div>
             </div>
-            <h3>
-              A partir de <span className="font-bold">R$ 149,90</span>
-            </h3>
-            <Button text="Saber Mais" />
+            <ul className="flex flex-col gap-1.25 mt-2">
+              {consultoriaOnline.map((item, idx) => (
+                <li key={idx} className="flex gap-0.5 items-center">
+                  <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+                  <span className="text-1.25 tracking-wide leading-button">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link href={"/consultoria"} className="mt-auto mx-auto all">
+              <Button
+                text="Ver Todos"
+                classname="bg-primary700 text-white border-0"
+              />
+            </Link>
           </CardMobile>
         </SwiperSlide>
         <SwiperSlide>
           <CardMobile className="transition-all">
             <div>
-              <Dumbbell />
-              <h2>Personal Training</h2>
-              <ul>
-                <li>Treino individualizado</li>
-                <li>Acompanhamento de evolução</li>
-                <li>Treinos e ajustes presenciais</li>
-                <li>Apenas Fortaleza e Eusébio (CE)</li>
-              </ul>
+              <h3 className="text-2 font-semibold tracking-[0.04rem] leading-[2.5rem] text-dark">
+                Personal Training
+              </h3>
+              <span className="">A partir de:</span>
+              <div className="flex gap-0.75 items-center">
+                <h4 className="text-2.75 font-semibold tracking-wider leading-[3.25rem] text-dark">
+                  R$ 219,90
+                </h4>
+                <span className="">por mês</span>
+              </div>
             </div>
-            <h3>
-              A partir de <span className="font-bold">R$ 219,90</span>
-            </h3>
-            <Button text="comprar aqui" />
+            <ul className="flex flex-col gap-1.25 mt-2">
+              {personalTraining.map((item, idx) => (
+                <li key={idx} className="flex gap-0.5 items-center">
+                  <CheckCircle className="w-1.5 h-1.5 text-primary900" />
+                  <span className="text-1.25 tracking-wide leading-button">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <Link href={"#"} className="mt-auto mx-auto">
+              <Button text="Saber Mais" />
+            </Link>
           </CardMobile>
         </SwiperSlide>
       </Swiper>
