@@ -9,12 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-       gif1: "url('https://imgur.com/aV1FE2B.gif')",
-       gif2: "url('https://imgur.com/ZtPovSN.gif')",
-       gif3: "url('https://imgur.com/RfpSpb7.gif')",
-       gif4: "url('https://imgur.com/xo6Fp9h.gif')",
-       gif5: "url('https://imgur.com/E6IXzj5.gif')",
-       gif6: "url('https://imgur.com/0PHEKiu.gif')",
+        gif1: "url('https://imgur.com/aV1FE2B.gif')",
+        gif2: "url('https://imgur.com/ZtPovSN.gif')",
+        gif3: "url('https://imgur.com/RfpSpb7.gif')",
+        gif4: "url('https://imgur.com/xo6Fp9h.gif')",
+        gif5: "url('https://imgur.com/E6IXzj5.gif')",
+        gif6: "url('https://imgur.com/0PHEKiu.gif')",
+        prata: "linear-gradient(to right, #E8E0DB, #919191)",
+        ouro: "linear-gradient(to right, #F3C56C, #B78C39)",
+        diamante: "linear-gradient(to right, #42A8E2, #66E2F2)"
       },
       animation: {
         "ping-test": "ping .4s cubic-bezier(0, 0, 0.2, 1) reverse forwards;",
@@ -254,6 +257,7 @@ const config: Config = {
         card: "-.75rem .25rem 3.75rem 0px rgba(62, 64, 149, 0.12)",
         mobileCard: "-0.0625rem .125rem 1rem rgba(62, 64, 149, 0.42);",
         gifcard: "-0.25rem 0.25rem 1.25rem 0px rgba(250, 250, 250, 0.04)",
+        planosConsultoria: "-.75rem .25rem .75rem 0px rgba(62, 64, 149, 0.04)",
       },
       dropShadow: {
         landing: "-.25rem .25rem 1.25rem rgba(18, 18, 18, 0.80)",

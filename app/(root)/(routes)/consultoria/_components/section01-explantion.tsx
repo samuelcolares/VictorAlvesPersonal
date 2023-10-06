@@ -11,6 +11,7 @@ import {
 import { Card, MobileCard } from "@/components/ui/card";
 
 import styled from "styled-components";
+import { cn } from "@/lib/util";
 
 const Consultoria = styled.section`
   .mySwiperCards {
@@ -114,7 +115,10 @@ const Servicos = () => {
     >
       <div className="flex w-full self-start items-center justify-between mb-1 lg:mb-0">
         <div className="flex flex-col gap-0.75">
-          <Heading titleBold="consultoria" title="online" color="dark" />
+          <h1 className="text-1.25 lg:text-2.5 tracking-wide uppercase w-fit lg:pr-2.25 pr-1 border-b-[.25rem] border-primary700 lg:leading-[2.5rem] leading-5">
+            <span className="font-bold">Consultoria</span>
+            <span>Online</span>
+          </h1>
           <p className="text-1.25 font-medium leading-button tracking-wide">
             Como funciona a consultoria? Entenda um pouco de cata etapa e venha
             fazer parte do time!
