@@ -99,15 +99,15 @@ const VerticalCarroussel = () => {
             className="object-cover w-[42.21rem] h-[31.08431rem] rounded-[1.75619rem]"
           />
         </SwiperSlide>
-        {/* <SwiperSlide>
+        <SwiperSlide>
           <Image
-            src={"/images/feedbacks/vertical/ss.jpg"}
+            src={"/images/feedbacks/vertical/edison.jpg"}
             alt="Imagem de Evolução de Aluno"
             width={1351}
             height={995}
             className="object-cover w-[42.21rem] h-[31.08431rem] rounded-[1.75619rem]"
           />
-        </SwiperSlide> */}
+        </SwiperSlide>
       </Swiper>
     </SW>
   );

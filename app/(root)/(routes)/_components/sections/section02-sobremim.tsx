@@ -45,7 +45,7 @@ const SobreMim = () => {
       className="lg:px-[5rem] lg:py-4 bg-dark flex lg:flex-row flex-col justify-evenly items-center"
       id="sobremim"
     >
-      <div className="lg:h-[25rem] min-w-[52.125rem] relative">
+      <div className="lg:!h-[25rem] sm:!h-[20rem] lg:min-w-[52.125rem] relative">
         <Line classname="line absolute top-[-1rem] left-[-1rem]" />
         <Image
           src={"/images/sobremim.png"}
@@ -56,13 +56,13 @@ const SobreMim = () => {
         />
         <div className="bg-primary700 w-[29.4375rem] h-[13.9375rem] rounded absolute bottom-[-1rem] right-[-1rem]" />
       </div>
-      <article className="order-first grow-1 w-[58.68rem] flex flex-col justify-center lg:gap-1 gap-0.75 px-2.5 py-[0.1875rem]">
+      <article className="grow-1 w-[58.68rem] flex flex-col justify-center lg:gap-1 gap-0.75 px-2.5 py-[0.1875rem]">
         <Heading
           titleBold="sobre"
           title="mim"
           color="text-white"
         />
-        <p className="hidden lg:block text-1.25 text-white font-medium leading-[1.5rem] tracking-[0.025rem]">
+        <p className="hidden text-1.25 lg:block text-white font-medium leading-[1.5rem] tracking-[0.025rem]">
           Me chamo Victor Alves, sou praticante de musculação a 12 anos,
           Profissional de Educação Física, Treinador presencial e online.
           Durante minha carreira, já atendi mais de 400 alunos e alunas, de

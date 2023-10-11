@@ -78,6 +78,15 @@ const HorizontalCarroussel = () => {
             className="object-cover w-[100%] h-[15rem] rounded-[0.565rem]"
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={"/images/feedbacks/vertical/edison.jpg"}
+            alt="Imagem de Evolução de Aluno"
+            width={1351}
+            height={995}
+            className="object-cover w-[100%] h-[15rem] rounded-[0.565rem]"
+          />
+        </SwiperSlide>
       </Swiper>
     </SWM>
   );

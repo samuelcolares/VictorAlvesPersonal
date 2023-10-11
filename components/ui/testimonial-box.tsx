@@ -30,6 +30,13 @@ const TestCards = [
     mes: "Junho",
     ano: 2023,
   },
+  {
+    image: "/images/feedbacks/testimonial/edison.jpg",
+    instagram: "edisonnt",
+    depoimento: `Estou na consultoria do Victor a um pouco mais de um ano e super indico, tive resultados sensacionais e pude ver o quão qualificado ele é como profissional e além disso, uma excelente pessoa!!!`,
+    mes: "Maio",
+    ano: 2022,
+  },
 ];
 
 export const TestimonialBox = () => {

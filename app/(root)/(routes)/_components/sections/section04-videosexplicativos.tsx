@@ -30,7 +30,7 @@ const VideosExplicativos = () => {
     >
       <article className="flex flex-col gap-0.5 lg:gap-2 shrink-0 lg:w-[46.9375rem]">
         <Heading titleBold="vídeos" title="explicativos" color="text-white" />
-        <p className="lg:text-1.5 lg:leading-button tracking-wide text-white w-[95%]">
+        <p className="lg:text-1.25 lg:leading-button tracking-wide text-white w-[95%]">
           Juntamente à planilha de treino, a consultoria online conta com vídeos
           dos exercícios, variações, alongamentos e mobilidade para te auxiliar
           no aprendizado. Tudo adaptado e feito sob medida para você, com base nas suas
