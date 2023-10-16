@@ -44,9 +44,9 @@ const ConsultoriaPlanos = () => {
         </ul>
       </div>
       <PlanosWrapper className="flex">
-        <Planos plano="prata" preço="R$ 149,90" />
-        <Planos plano="ouro" preço="R$ 397,90" classname="-ml-1 z-30" />
-        <Planos plano="diamante" preço="R$ 697,90" classname="-ml-1 z-40" />
+        <Planos plano="prata" />
+        <Planos plano="ouro" classname="-ml-1 z-30" />
+        <Planos plano="diamante" classname="-ml-1 z-40" />
       </PlanosWrapper>
     </section>
   );

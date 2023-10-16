@@ -80,7 +80,7 @@ export const PlanosCards = () => {
           ))}
         </ul>
 
-        <Link href={"#"} className="mt-auto mx-auto">
+        <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20nas%20planilha%20de%20treino,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
           <Button text="comprar aqui" />
         </Link>
       </Card>
@@ -139,7 +139,7 @@ export const PlanosCards = () => {
           ))}
         </ul>
 
-        <Link href={"#"} className="mt-auto mx-auto">
+        <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20no%20personal%20training,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
           <Button text="Saber Mais" />
         </Link>
       </Card>

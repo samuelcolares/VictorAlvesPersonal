@@ -1,15 +1,16 @@
 "use client";
 import { cn } from "@/lib/util";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 type PlanosProps = {
   plano: string;
-  preço: string;
+  link?: string;
   classname?: string;
 };
 
-const Planos: React.FC<PlanosProps> = ({ plano, preço, classname }) => {
+const Planos: React.FC<PlanosProps> = ({ plano, link, classname }) => {
   return (
     <div
       className={cn(
@@ -40,9 +41,9 @@ const Planos: React.FC<PlanosProps> = ({ plano, preço, classname }) => {
           {plano === "diamante" && "Seis protocolo de treinamento"}
         </p>
       </div>
-      <button className="h-[2.7rem] px-[1.35rem] bg-primary700 w-fit mx-auto rounded-[0.225rem] lg:hover:bg-primary600 transition-all text-white uppercase font-bold tracking-wide leading-7">
+      <Link href={`https://whatsa.me/5585992814760/?t=Oi%20Victor,%20quero%20adquirir%20a%20consultoria%20${plano}`} target="_blank" className="h-[2.7rem] px-[1.35rem] bg-primary700 w-fit mx-auto rounded-[0.225rem] lg:hover:bg-primary600 transition-all text-white uppercase font-bold tracking-wide leading-7 flex items-center">
         comprar esse
-      </button>
+      </Link>
       {plano === "prata" && (
         <div className="h-[1.5rem] w-full bg-prata absolute top-0 left-[30%] z-10 rotate-45" />
       )}

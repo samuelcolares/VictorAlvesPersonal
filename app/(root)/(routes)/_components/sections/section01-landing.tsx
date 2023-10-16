@@ -36,7 +36,7 @@ const Landing = styled.header`
   @media screen and (max-width: 1024px) {
     /* height: 800px; */
     background: url("./images/section_home_mobile.jpg") no-repeat center;
-    background-color: #1a1b1abf !important;
+    background-color: rgba(26, 27, 26, 0.45) !important;
     background-blend-mode: overlay !important;
     background-size: cover;
     justify-content: space-between;
@@ -108,8 +108,7 @@ const LandingSection = () => {
               Mais de 500 alunos atendidos
             </h2>
             <Link
-              href={"#"}
-              as={"button"}
+              href={"#planos"}
               className="px-1.5 flex items-center justify-center h-3 font-bold leading-button tracking-button text-white bg-[#5754A8] lg:hover:scale-105 lg:hover:shadow-landing lg:hover:shadow-gray-950 transition rounded"
             >
               FAÇA PARTE DO TIME
