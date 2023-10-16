@@ -5,9 +5,10 @@ import Planos from "./planos";
 import styled from "styled-components";
 const consultoria = [
   "Treino individualizado",
+  "Acompanhamento de evolução",
   "Avaliação postural e funcional feita de forma online ",
   "Videos de alongamentos e mobilidades",
-  "Acompanhamento de evolução",
+  "Acesso ao aplicativo de treinos",
   "Ajustes com base no feedback semanal",
   "Acompanhamento via WhatsApp de segunda a sábado",
 ];
