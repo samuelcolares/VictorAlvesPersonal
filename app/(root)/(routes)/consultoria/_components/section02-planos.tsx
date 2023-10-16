@@ -5,10 +5,11 @@ import Planos from "./planos";
 import styled from "styled-components";
 const consultoria = [
   "Treino individualizado",
-  "Vídeos dos exercícios",
+  "Avaliação postural e funcional feita de forma online ",
+  "Videos de alongamentos e mobilidades",
   "Acompanhamento de evolução",
   "Ajustes com base no feedback semanal",
-  "Esclarecimento de dúvidas 24hrs",
+  "Acompanhamento via WhatsApp de segunda a sábado",
 ];
 
 const PlanosWrapper = styled.div`
@@ -17,7 +18,7 @@ const PlanosWrapper = styled.div`
     justify-content: center;
     gap: 1rem;
 
-    &>div{
+    & > div {
       margin-left: 0;
     }
   }
@@ -43,11 +44,16 @@ const ConsultoriaPlanos = () => {
           ))}
         </ul>
       </div>
-      <PlanosWrapper className="flex">
-        <Planos plano="prata" />
-        <Planos plano="ouro" classname="-ml-1 z-30" />
-        <Planos plano="diamante" classname="-ml-1 z-40" />
-      </PlanosWrapper>
+      <div className="flex flex-col">
+        <PlanosWrapper className="flex">
+          <Planos plano="prata" />
+          <Planos plano="ouro" classname="-ml-1 z-30" />
+          <Planos plano="diamante" classname="-ml-1 z-40" />
+        </PlanosWrapper>
+        <p className="text-white text-center mt-0.5">
+          * Cada protocolo de treino dura entre 30 a 60 dias.
+        </p>
+      </div>
     </section>
   );
 };

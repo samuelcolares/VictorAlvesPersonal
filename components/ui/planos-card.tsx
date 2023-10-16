@@ -27,8 +27,8 @@ const consultoriaOnline = [
   "Planejamento para 4 a 8 semanas",
   "Vídeos dos exercícios",
   "Acompanhamento de evolução",
+  "WhatsApp de segunda a sábado",
   "Ajustes com base no feedback semanal",
-  "Esclarecimento de dúvidas 24hrs",
   "Avaliação postural e funcional online",
 ];
 
