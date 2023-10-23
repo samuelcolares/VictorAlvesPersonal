@@ -8,12 +8,12 @@ import "swiper/css/effect-creative";
 import TestimonialCard from "./testimonial-card";
 import Image from "next/image";
 
-const TestCards = [
+const TestCards1 = [
   {
     image: "/images/feedbacks/testimonial/vitoriagomes.jpg",
     instagram: "vitoriagomys",
     depoimento: `Indico muito a consultoria do Victor. A forma como ele monta os treinos e demonstra interesse em entender cada ponto do seu objetivo é demais.`,
-    mes: "setembro",
+    mes: "Setembro",
     ano: 2022,
   },
   {
@@ -30,6 +30,9 @@ const TestCards = [
     mes: "Junho",
     ano: 2023,
   },
+];
+
+const TestCards2 = [
   {
     image: "/images/feedbacks/testimonial/edison.jpg",
     instagram: "edisonnt",
@@ -37,10 +40,29 @@ const TestCards = [
     mes: "Maio",
     ano: 2022,
   },
-];
+  {
+    image: "/images/feedbacks/testimonial/amandacearense.jpg",
+    instagram: "amandacearense",
+    depoimento: `Victor tem sido o melhor personal trainer que já tive incluindo alguns nos Estados Unidos. Ele é super atencioso e dedicado. O profissionalismo dele é impressionante, sempre respondendo às perguntas de WhatsApp. Os seus treinos são muito bons, precisos e criativos, nada entediante.`,
+    mes: "Junho",
+    ano: 2023,
+  },
+  {
+    image: "/images/feedbacks/testimonial/sabrinaguilhon.jpg",
+    instagram: "sabrinaguilhon",
+    depoimento: `Aos 45, tenho me sentido na melhor fase da vida em termos de saúde, disposição, ganho de massa magra e bem estar. Um bom profissional faz toda diferença.`,
+    mes: "Junho",
+    ano: 2023,
+  },
+]
 
-export const TestimonialBox = () => {
-  const mappedCards = TestCards.map((item, idx) => (
+type TestimonalProps = {
+  variant: number;
+};
+
+export const TestimonialBox: React.FC<TestimonalProps> = ({ variant }) => {
+  const abacate = variant === 1 ? [...TestCards1] : [...TestCards2]
+  const mappedCards = abacate.map((item, idx) => (
     <SwiperSlide key={idx}>
       <TestimonialCard
         instagram={item.instagram}
@@ -101,7 +123,7 @@ export const TestimonialBox = () => {
 };
 
 export const TestimonialBoxMobile = () => {
-  const mappedCards = TestCards.map((item, idx) => (
+  const mappedCards = [...TestCards1,...TestCards2].map((item, idx) => (
     <SwiperSlide key={idx}>
       <TestimonialCard
         instagram={item.instagram}

@@ -25,7 +25,7 @@ const Feedbacks = () => {
       <div className="flex items-center justify-between lg:mb-2">
         <div className="flex flex-col gap-0.75">
           <Heading color="text-white" titleBold="FEED" title="backs" />
-          <p className="text-1.25 text-white font-medium leading-button tracking-wide">
+          <p className="lg:text-1.25 text-white font-medium leading-button tracking-wide">
             Confira algumas evoluções e comentários de quem faz parte do{" "}
             <span className="border-b border-primary500 font-bold">
               <span className="text-primary400">#</span>
@@ -47,8 +47,8 @@ const Feedbacks = () => {
       <div className="lg:flex items-center gap-3 hidden">
         <VerticalCarroussel />
         <div className="flex flex-col gap-2">
-          <TestimonialBox />
-          <TestimonialBox />
+          <TestimonialBox variant={1}/>
+          <TestimonialBox variant={2}/>
           {/* <TestimonialBox /> */}
         </div>
       </div>

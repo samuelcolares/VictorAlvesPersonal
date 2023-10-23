@@ -12,8 +12,7 @@ const HomePage = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
   useEffect(() => {
     setIsMounted(true);
-    setTimeout(() => {
-    }, 1500);
+    setTimeout(() => {}, 1500);
   }, []);
   if (!isMounted)
     return (
