@@ -3,10 +3,11 @@ import VideosPlusFeedbacks from "@/components/sections-wrapper";
 import LandingSection from "./_components/sections/section01-landing";
 import SobreMim from "./_components/sections/section02-sobremim";
 import Planos from "./_components/sections/section06-planos";
-import { NavbarMobile } from "@/components/ui/navbar";
 import Image from "next/image";
 
 import React, { useState, useEffect } from "react";
+import Servicos from "./consultoria/_components/section01-explantion";
+import ConsultoriaPlanos from "./consultoria/_components/section02-planos";
 
 const HomePage = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -51,6 +52,7 @@ const HomePage = () => {
     <main className="bg-dark">
       <LandingSection />
       <SobreMim />
+      <Servicos />
       <VideosPlusFeedbacks />
       <Planos />
     </main>

@@ -27,7 +27,7 @@ const PlanosWrapper = styled.div`
 
 const ConsultoriaPlanos = () => {
   return (
-    <section className="lg:py-2.5 lg:px-[5em] py-2 px-1 bg-dark flex flex-col lg:flex-row lg:justify-between lg:items-center gap-1">
+    <section className="lg:py-2.5 lg:px-[5em] py-2 px-1 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-1">
       <div className="lg:w-[30.3125rem]">
         <h2 className="text-1.25 lg:text-2.5 text-white border-b-4 border-primary500 w-[18.5rem] lg:w-full">
           EM <span className="font-bold">TODOS</span> OS PLANOS DA{" "}

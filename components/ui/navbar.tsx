@@ -7,7 +7,8 @@ import { cn } from "@/lib/util";
 import { useParams, usePathname, useRouter } from "next/navigation";
 
 const homelinks = [
-  { link: "Consultoria", href: "/consultoria" },
+  { link: "Consultoria", href: "#consultoria" },
+  // { link: "Consultoria", href: "/consultoria" },
   { link: "FEEDBACKS", href: "#feedbacks" },
   { link: "Planos", href: "#planos" },
   // { link: "CONTATO", href: "/contato" },
@@ -43,7 +44,7 @@ export const NavbarDesktop = () => {
           href={item.href}
           className="text-white uppercase font-semibold leading-8 px-1 py-0.625 flex items-center justify-center text-1.5 lg:hover:text-primary500 transition"
           key={idx}
-          onClick={handleScroll}
+          // onClick={handleScroll}
         >
           {item.link}
         </Link>
@@ -61,20 +62,20 @@ export const NavbarDesktop = () => {
 
 export const NavbarMobile = () => {
   return (
-    <nav className=" lg:hidden absolute flex justify-between w-full items-center">
+    <nav className=" lg:hidden absolute flex justify-end w-full items-center">
       <Link
         href={"https://www.instagram.com/victoralvespersonal_"}
         target="_blank"
-        className="text-white transition px-0.5"
+        className="text-white transition p-1"
       >
         <Instagram className="w-[2rem] h-[2rem]" />
       </Link>
-      <Link
+      {/* <Link
         href={"/consultoria"}
         className="text-white uppercase font-semibold leading-8 px-0.5 py-0.625 flex items-center justify-center text-1.25 lg:hover:text-primary500 transition"
       >
         Consultoria
-      </Link>
+      </Link> */}
     </nav>
   );
 };

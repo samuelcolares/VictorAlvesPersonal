@@ -2,9 +2,9 @@
 import React from "react";
 import Button from "./button";
 import styled from "styled-components";
-import { CheckCircle, Dumbbell, Globe, TableProperties } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import Link from "next/link";
 
@@ -80,7 +80,13 @@ export const PlanosCards = () => {
           ))}
         </ul>
 
-        <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20nas%20planilha%20de%20treino,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
+        <Link
+          href={
+            "https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20nas%20planilha%20de%20treino,%20como%20funciona?"
+          }
+          className="mt-auto mx-auto"
+          target="_blank"
+        >
           <Button text="comprar aqui" />
         </Link>
       </Card>
@@ -108,7 +114,7 @@ export const PlanosCards = () => {
           ))}
         </ul>
 
-        <Link href={"/consultoria"} className="mt-auto mx-auto all">
+        <Link href={"#consultoria"} className="mt-auto mx-auto all">
           <Button
             text="Conhecer os planos"
             classname="bg-primary700 text-white border-0"
@@ -139,7 +145,13 @@ export const PlanosCards = () => {
           ))}
         </ul>
 
-        <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20no%20personal%20training,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
+        <Link
+          href={
+            "https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20no%20personal%20training,%20como%20funciona?"
+          }
+          className="mt-auto mx-auto"
+          target="_blank"
+        >
           <Button text="Saber Mais" />
         </Link>
       </Card>
@@ -201,8 +213,12 @@ export const PlanosCardsMobile = () => {
         spaceBetween={10}
         className="mySwiperPlanos w-full"
         loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{ clickable: true }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
       >
         <SwiperSlide>
           <CardMobile className="transition-all">
@@ -225,7 +241,13 @@ export const PlanosCardsMobile = () => {
               ))}
             </ul>
 
-            <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20nas%20planilha%20de%20treino,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
+            <Link
+              href={
+                "https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20nas%20planilha%20de%20treino,%20como%20funciona?"
+              }
+              className="mt-auto mx-auto"
+              target="_blank"
+            >
               <Button text="comprar aqui" />
             </Link>
           </CardMobile>
@@ -255,7 +277,7 @@ export const PlanosCardsMobile = () => {
               ))}
             </ul>
 
-            <Link href={"/consultoria"} className="mt-auto mx-auto all">
+            <Link href={"#consultoria"} className="mt-auto mx-auto all">
               <Button
                 text="Conhecer os planos"
                 classname="bg-primary700 text-white border-0"
@@ -288,7 +310,13 @@ export const PlanosCardsMobile = () => {
               ))}
             </ul>
 
-            <Link href={"https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20no%20personal%20training,%20como%20funciona?"} className="mt-auto mx-auto" target="_blank">
+            <Link
+              href={
+                "https://whatsa.me/5585992814760/?t=Oi%20Victor,%20tenho%20interesse%20no%20personal%20training,%20como%20funciona?"
+              }
+              className="mt-auto mx-auto"
+              target="_blank"
+            >
               <Button text="Saber Mais" />
             </Link>
           </CardMobile>

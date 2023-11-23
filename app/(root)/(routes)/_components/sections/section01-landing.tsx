@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import { NavbarDesktop, NavbarMobile } from "../../../../../components/ui/navbar";
+import { NavbarDesktop, NavbarMobile } from "@/components/ui/navbar";
 
 const Landing = styled.header`
   font-size: 1em;
