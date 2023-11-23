@@ -57,28 +57,26 @@ const SobreMim = () => {
         <div className="bg-primary700 w-[29.4375rem] h-[13.9375rem] rounded absolute bottom-[-1rem] right-[-1rem]" />
       </div>
       <article className="grow-1 w-[58.68rem] flex flex-col justify-center lg:gap-1 gap-0.75 px-2.5 py-[0.1875rem]">
-        <Heading
-          titleBold="sobre"
-          title="mim"
-          color="text-white"
-        />
+        <Heading titleBold="sobre" title="mim" color="text-white" />
         <p className="hidden text-1.25 lg:block text-white font-medium leading-[1.5rem] tracking-[0.025rem]">
-          Me chamo Victor Alves, sou praticante de musculação a 12 anos,
-          Profissional de Educação Física, Treinador presencial e online.
-          Durante minha carreira, já atendi mais de 400 alunos e alunas, de
-          diferentes cidades e países. O meu objetivo é ajudar você a atingir
-          suas metas, e por isso, através de uma abordagem individualizada e
-          adaptada às suas necessidades, vou te ajudar a alcançar os resultados
-          que você deseja. Levarei em consideração seus hábitos de vida,
-          preferências e metas específicas para desenvolver um plano de
-          treinamento que se encaixe perfeitamente em sua rotina.
+          Olá, me chamo Victor Alves, sou Profissional de Educação Física,
+          treinador presencial e online, sou especialista em treinamento
+          feminino, postura e biomecânica. Ao longo da minha carreira já ajudei
+          mais de 500 alunos e alunas de diversas cidades e países. Na minha
+          consultoria online você terá um acompanhamento totalmente
+          individualizado, onde o meu objetivo é te ajudar a alcançar os
+          resultados que você deseja, onde irei avaliar, saber suas preferências
+          para que assim desenvolva um treino perfeito para você.
         </p>
         <p className="lg:hidden leading-6 text-white">
-          Levando em consideração os seus hábitos de vida, preferências e metas
-          desenvolvo planos de treinamento individualizados que se encaixem na
-          sua rotina. Especializado em postura, biomecânica, treinamento
-          feminino e pós-graduando em reabilitação física já atendi mais de 500
-          alunos de diferentes cidades e países, muito prazer, Victor Alves.
+        Olá, me chamo Victor Alves, sou Profissional de Educação Física,
+          treinador presencial e online, sou especialista em treinamento
+          feminino, postura e biomecânica. Ao longo da minha carreira já ajudei
+          mais de 500 alunos e alunas de diversas cidades e países. Na minha
+          consultoria online você terá um acompanhamento totalmente
+          individualizado, onde o meu objetivo é te ajudar a alcançar os
+          resultados que você deseja, onde irei avaliar, saber suas preferências
+          para que assim desenvolva um treino perfeito para você.
         </p>
       </article>
     </About>

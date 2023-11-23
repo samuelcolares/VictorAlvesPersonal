@@ -24,21 +24,21 @@ const Planos: React.FC<PlanosProps> = ({ plano, link, classname }) => {
       <div className="flex items-center gap-[0.75rem] mb-1 lg:mb-0">
         <p className="text-1.5 lg:text-2.75 font-semibold leading-[3.25rem] tracking-wider">
           {plano === "prata" && "R$ 149,90"}
-          {plano === "ouro" && "R$ 397,90"}
-          {plano === "diamante" && "R$ 697,90"}
+          {plano === "ouro" && "R$ 259,90"}
+          {plano === "diamante" && "R$ 379,90"}
         </p>
         <span className="lg:text-1 text-0.75">
-          {plano === "prata" && "mensal"}
-          {plano === "ouro" && "trimestral"}
-          {plano === "diamante" && "semestral"}
+          {plano === "prata" && ""}
+          {plano === "ouro" && ""}
+          {plano === "diamante" && ""}
         </span>
       </div>
       <div className="flex items-center gap-0.5 mb-0.75 lg:mb-0">
         <CheckCircle className="w-1.5 h-1.5 text-primary500" />
         <p className="text-1.25">
           {plano === "prata" && "Um protocolo de treinamento"}
-          {plano === "ouro" && "Três protocolos de treinamento"}
-          {plano === "diamante" && "Seis protocolo de treinamento"}
+          {plano === "ouro" && "Dois protocolos de treinamento"}
+          {plano === "diamante" && "Três protocolo de treinamento"}
         </p>
       </div>
       <Link href={`https://whatsa.me/5585992814760/?t=Oi%20Victor,%20quero%20adquirir%20a%20consultoria%20${plano}`} target="_blank" className="h-[2.7rem] px-[1.35rem] bg-primary700 w-fit mx-auto rounded-[0.225rem] lg:hover:bg-primary600 transition-all text-white uppercase font-bold tracking-wide leading-7 flex items-center">

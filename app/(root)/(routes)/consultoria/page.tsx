@@ -5,7 +5,7 @@ import ConsultoriaNav from "./_components/consultoria-nav";
 
 const ConsultoriaPage = () => {
   return (
-    <main className="pt-2 bg-white">
+    <main className="lg:pt-2 bg-white">
       <ConsultoriaNav />
       <Servicos />
       <ConsultoriaPlanos />

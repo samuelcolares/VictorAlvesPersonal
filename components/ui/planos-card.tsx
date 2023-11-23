@@ -11,25 +11,25 @@ import Link from "next/link";
 const personalTraining = [
   "Treino individualizado",
   "Acompanhamento de evolução",
-  "Treinos e avaliações presenciais",
+  "Avaliações presenciais",
   "Esclarecimento de dúvidas 24hrs",
   "Apenas Fortaleza e Eusébio (CE)",
 ];
 
 const planilhasDeTreino = [
-  "Planilha com foco no seu objetivo",
-  "Planejamento para 4 a 8 semanas",
+  "Protocolo para seu objetivo",
+  "Planejamento para 5 semanas",
   "Vídeos dos exercícios",
 ];
 
 const consultoriaOnline = [
   "Treino individualizado",
-  "Planejamento para 4 a 8 semanas",
+  // "Planejamento para 1, 2 ou 3 protocolos",
   "Vídeos dos exercícios",
   "Acompanhamento de evolução",
-  "WhatsApp de segunda a sábado",
-  "Ajustes com base no feedback semanal",
-  "Avaliação postural e funcional online",
+  "WhatsApp de seg a sáb",
+  "Ajustes com base no feedback",
+  "Avaliação postural e funcional",
 ];
 
 const Card = styled.div`
@@ -110,7 +110,7 @@ export const PlanosCards = () => {
 
         <Link href={"/consultoria"} className="mt-auto mx-auto all">
           <Button
-            text="Ver Todos"
+            text="Conhecer os planos"
             classname="bg-primary700 text-white border-0"
           />
         </Link>
@@ -148,7 +148,7 @@ export const PlanosCards = () => {
 };
 
 const CardMobile = styled.div`
-  height: 45rem;
+  height: 35rem;
   display: flex;
   padding: 1.25rem 1rem;
   flex-direction: column;
@@ -257,7 +257,7 @@ export const PlanosCardsMobile = () => {
 
             <Link href={"/consultoria"} className="mt-auto mx-auto all">
               <Button
-                text="Ver Todos"
+                text="Conhecer os planos"
                 classname="bg-primary700 text-white border-0"
               />
             </Link>

@@ -52,7 +52,7 @@ const ConsultoriaPlanos = () => {
           <Planos plano="diamante" classname="-ml-1 z-40" />
         </PlanosWrapper>
         <p className="text-white text-center mt-0.5">
-          * Cada protocolo de treino dura entre 30 a 60 dias.
+          * Cada protocolo de treino é valido por 5 semanas.
         </p>
       </div>
     </section>

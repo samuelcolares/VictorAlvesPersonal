@@ -39,6 +39,7 @@ const Landing = styled.header`
     background-color: rgba(26, 27, 26, 0.45) !important;
     background-blend-mode: overlay !important;
     background-size: cover;
+    background-attachment: fixed;
     justify-content: space-between;
 
     .landing_mobile {
@@ -82,8 +83,8 @@ const Landing = styled.header`
 
 const LandingSection = () => {
   return (
-    <Landing className="scroll bg-dark relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] pt-1 pb-2">
-      {/* <NavbarMobile /> */}
+    <Landing className="scroll bg-dark relative z-[100] lg:static flex lg:flex-col lg:py-1 lg:px-[5rem] lg:pt-1 pb-2">
+      <NavbarMobile />
       <NavbarDesktop />
       <section className="landing_mobile flex lg:flex-1 flex-col justify-center items-start gap-2 w-[50rem]">
         <h1 aria-label="Logo Victor Alves" className="h-[8.5rem] w-[30.86rem]">
@@ -125,7 +126,7 @@ export default LandingSection;
 
 /**
  |--------------------------------------------------
- 
+
 
 {link:"PLANOS",
 href: "/planos"
